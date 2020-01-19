@@ -1,0 +1,34 @@
+english <- c(90, 80, 60 ,70)
+english
+
+
+
+math <- c(50,60,10,200)
+math
+
+
+df_midterm <- data.frame(english, math)
+df_midterm
+
+
+
+
+english <- c(90, 80, 60 ,70)
+english
+
+
+
+math <- c(50,60,10,200)
+math
+
+
+df_midterm <- data.frame(english, math)
+df_midterm
+
+
+
+
+
+
+
+
