@@ -53,5 +53,29 @@ exam
 mean(exam$math)
 
 
+#----------------------------------
+mpg<-as.data.frame(ggplot2::mpg)
+boxplot(mpg$hwy)
+boxplot(mpg$hwy)$stats
+
+# 결측치처리
+mpg$hwy <- ifelse(mpg$hwy < 12 | mpg$hwy > 37, NA, mpg$hwy)
+table(is.na(mpg$hwy))
+
+mpg %>% 
+  group_by(drv) %>% 
+  summarise(mean_hwy = mean(hwy, na.rm = T))
 
 
+library(ggplot2)
+ggplot(data=economics, aes(x=date, y=unemploy)) + geom_line()
+
+?economics
+head(economics)
+
+ggplot(data = mpg, aes(x = displ, y = hwy)) + geom_point()
+
+ggplot(data = mpg, aes(x = displ, y = hwy)) + geom_point() + xlim(3, 6) + ylim(10, 30)
+
+df_mpg <- mpg %>% group_by(drv) %>% summarise(mean_hwy = mean(hwy))
+df_mpg
